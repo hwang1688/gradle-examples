@@ -1,0 +1,16 @@
+task build(type: Exec) {
+
+    // The executable must be the first parameter by itself followed by the parameters
+    commandLine "ls", "-l", "build.gradle"
+
+    // Working directory by default is the project directory
+    workingDir "."
+
+    // Print out some of the properties of this task
+    println "build.commandLine = $build.commandLine"
+    println "build.executable = $build.executable"
+    println "build.args = $build.args"
+    println "build.workingDir = $build.workingDir"
+    println "build.environment = $build.environment"
+}
+
